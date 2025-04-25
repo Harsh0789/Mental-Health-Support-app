@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hope Heaven - AI-Powered Mental Health Support</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Advanced mental health support platform with AI-powered features and professional resources" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h2>Hope Heaven</h2>
+      </div>
+      <div class="nav-links">
+        <a href="/" aria-current="page">Home</a>
+        <a href="#resources">Resources</a>
+        <a href="#community">Community</a>
+        <a href="#support">Support</a>
+        <button id="loginBtn" class="login-btn">Login</button>
+        <button id="signupBtn" class="signup-btn">Sign Up</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Your Journey to Better Mental Health Starts Here</h1>
+      <p>Experience personalized support powered by AI technology and connect with licensed professionals.</p>
+      <div class="hero-buttons">
+        <button id="startJourneyBtn" class="primary-btn">Start Your Journey</button>
+        <button id="learnMoreBtn" class="secondary-btn">Learn More</button>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>How We Support You</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Chat Support</h3>
+          <p>24/7 intelligent chat support for immediate assistance and guidance.</p>
+          <button class="try-now-btn">Try Now</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Professional Therapy</h3>
+          <p>Connect with licensed therapists through secure video sessions.</p>
+          <button class="book-btn">Book Session</button>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Progress Tracking</h3>
+          <p>Monitor your mental health journey with interactive tools.</p>
+          <button class="track-btn">Track Now</button>
+        </div>
+        <div id="community" class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Community Support</h3>
+          <p>Join our moderated support groups and forums.</p>
+          <button class="join-btn">Join Community</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="resources">
+      <h2>Mental Health Resources</h2>
+      <div class="resource-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="articles">Articles</button>
+        <button class="filter-btn" data-filter="videos">Videos</button>
+        <button class="filter-btn" data-filter="exercises">Exercises</button>
+      </div>
+      <div class="resource-grid">
+        <!-- Resources will be dynamically populated -->
+      </div>
+    </section>
+
+    <section id="mood-tracker" class="mood-tracker">
+      <h2>Track Your Mood</h2>
+      <div class="mood-container">
+        <div class="mood-selector">
+          <h3>How are you feeling today?</h3>
+          <div class="mood-options">
+            <button class="mood-btn" data-mood="great">
+              <span>😊 Great</span>
+            </button>
+            <button class="mood-btn" data-mood="good">
+              <span>🙂 Good</span>
+            </button>
+            <button class="mood-btn" data-mood="okay">
+              <span>😐 Okay</span>
+            </button>
+            <button class="mood-btn" data-mood="down">
+              <span>😔 Down</span>
+            </button>
+            <button class="mood-btn" data-mood="bad">
+              <span>😢 Bad</span>
+            </button>
+          </div>
+        </div>
+        <div class="mood-chart-container">
+          <canvas class="mood-chart"></canvas>
+          <div class="mood-summary"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Ready to Take Control of Your Mental Health?</h2>
+      <p>Join thousands who have already started their journey to better mental well-being. Your path to a healthier mind starts here.</p>
+      <div class="cta-buttons">
+        <button class="cta-button primary">
+          <span>Start Free Trial</span>
+          <span class="button-icon">→</span>
+        </button>
+        <button class="cta-button secondary">
+          <span>View Plans</span>
+          <span class="button-icon">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Emergency Support</h3>
+          <p class="emergency">If you're in crisis, please call:</p>
+          <p class="hotline">988 - Crisis Hotline (24/7)</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://x.com/home?lang=en" class="social-link">Twitter</a>
+            <a href="https://www.facebook.com/" class="social-link">Facebook</a>
+            <a href="https://www.instagram.com/" class="social-link">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div id="support" class="footer-bottom">
+        <p>© 2024 Hope Heaven. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Modal Components -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Welcome Back</h2>
+        <p>Continue your mental health journey</p>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <input type="email" id="loginEmail" placeholder=" " required>
+            <label for="loginEmail">Email Address</label>
+          </div>
+          <div id="no" class="form-group">
+            <input type="password" id="loginPassword" placeholder=" " required>
+            <label for="loginPassword">Password</label>
+          </div>
+          <button type="submit" class="submit-btn">Login</button>
+          <div class="auth-footer">
+            <p>Don't have an account? <a href="#harsh" onclick="openModal(signupModal); closeModal(loginModal);">Sign up</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Account</h2>
+        <p>Start your mental wellness journey today</p>
+        <form id="signupForm" class="auth-form">
+          <div class="form-group">
+            <input type="text" id="signupName" placeholder=" " required>
+            <label for="signupName">Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="signupEmail" placeholder=" " required>
+            <label for="signupEmail">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="signupPassword" placeholder=" " required>
+            <label for="signupPassword">Password</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="confirmPassword" placeholder=" " required>
+            <label for="confirmPassword">Confirm Password</label>
+          </div>
+          <button type="submit" class="submit-btn">Create Account</button>
+          <div class="auth-footer">
+            <p>Already have an account? <a href="#no" onclick="openModal(loginModal); closeModal(signupModal);">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+      <button id="chatToggle" class="chat-toggle">
+        <span class="chat-icon">💬</span>
+        <span class="chat-text">Need Help?</span>
+      </button>
+      <div id="chatContainer" class="chat-container hidden">
+        <div class="chat-header">
+          <h3>AI Support Assistant</h3>
+          <button class="minimize-chat">−</button>
+        </div>
+        <div class="chat-messages"></div>
+        <div class="chat-input">
+          <input type="text" placeholder="Type your message...">
+          <button class="send-message">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

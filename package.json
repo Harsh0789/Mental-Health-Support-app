@@ -1,0 +1,12 @@
+{
+  "name": "mindwell-mental-health",
+  "version": "1.0.0",
+  "description": "Mental health support platform",
+  "scripts": {
+    "start": "servor --reload"
+  },
+  "dependencies": {
+    "servor": "^4.0.2",
+    "chart.js": "^4.4.1"
+  }
+}
